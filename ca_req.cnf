@@ -1,0 +1,18 @@
+[ req ]
+prompt                = no
+distinguished_name    = req_distinguished_name
+x509_extensions       = ca_extensions
+string_mask           = utf8only
+
+[ req_distinguished_name ]
+countryName           = IT
+stateOrProvinceName   = Milano
+localityName          = Milano
+organizationName      = Immobiliare.it S.p.A.
+OU                    = Corp Systems
+CN                    = test.angelo.burzi.urm.ns.farm
+emailAddress          = it.helpdesk@immobiliare.it
+
+[ ca_extensions ]
+keyUsage = critical,digitalSignature,nonRepudiation,keyEncipherment,keyCertSign
+basicConstraints = critical,CA:true,pathlen:1

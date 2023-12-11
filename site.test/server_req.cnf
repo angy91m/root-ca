@@ -1,0 +1,22 @@
+[ req ]
+prompt                = no
+distinguished_name    = req_distinguished_name
+req_extensions        = req_ext
+
+[ req_distinguished_name ]
+countryName           = IT
+stateOrProvinceName   = Milano
+localityName          = Milano
+organizationName      = ACME S.p.A.
+OU                    = Corp Systems
+CN                    = site.test
+emailAddress          = it.helpdesk@site.test
+
+[ req_ext ]
+keyUsage              = critical,digitalSignature,nonRepudiation,keyEncipherment,dataEncipherment
+extendedKeyUsage      = serverAuth,clientAuth
+subjectAltName        = @alt_names
+
+[alt_names]
+DNS.1                 = site.test
+# DNS.2                 = *.site.test
